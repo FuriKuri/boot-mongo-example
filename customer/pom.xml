@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.furikuri</groupId>
-	<artifactId>boot-mongo-example</artifactId>
+	<artifactId>customer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>boot-mongo-example</name>
+	<name>customer</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
