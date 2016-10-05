@@ -22,14 +22,17 @@ public class HashController {
   @RequestMapping("/")
   public String hash(HttpServletResponse response) throws NoSuchAlgorithmException {
     String body = restTemplate.getForObject(url, String.class);
+    response.setHeader("x-hash", hash(body));
+    return body;
+  }
+
+  private String hash(String body) throws NoSuchAlgorithmException {
     MessageDigest md = MessageDigest.getInstance("MD5");
     byte[] mdbytes = md.digest(body.getBytes());
-    StringBuffer sb = new StringBuffer();
+    StringBuilder sb = new StringBuilder();
     for (byte mdbyte : mdbytes) {
       sb.append(Integer.toString((mdbyte & 0xff) + 0x100, 16).substring(1));
     }
-    String hash = sb.toString();
-    response.setHeader("x-hash", hash);
-    return body;
+    return sb.toString();
   }
 }
