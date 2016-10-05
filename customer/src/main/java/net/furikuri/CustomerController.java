@@ -10,17 +10,17 @@ import java.util.List;
 @RestController
 public class CustomerController {
 
-    @Autowired
-    private CustomerRepository repository;
+  @Autowired
+  private CustomerRepository repository;
 
-    @RequestMapping("/")
-    public List<Customer> get() {
-        return repository.findAll();
-    }
+  @RequestMapping("/")
+  public List<Customer> get() {
+    return repository.findAll();
+  }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Customer add(Customer customer) {
-        return repository.save(customer);
-    }
+  @RequestMapping(value = "/", method = RequestMethod.POST)
+  public Customer add(Customer customer) {
+    return repository.save(customer);
+  }
 
 }

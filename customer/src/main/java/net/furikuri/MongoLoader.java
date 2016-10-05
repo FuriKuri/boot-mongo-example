@@ -8,13 +8,13 @@ import javax.annotation.PostConstruct;
 @Component
 public class MongoLoader {
 
-    @Autowired
-    private CustomerRepository repository;
+  @Autowired
+  private CustomerRepository repository;
 
-    @PostConstruct
-    public void initData() {
-        repository.deleteAll();
-        repository.save(new Customer("Alice", "Smith"));
-        repository.save(new Customer("Bob", "Smith"));
-    }
+  @PostConstruct
+  public void initData() {
+    repository.deleteAll();
+    repository.save(new Customer("Alice", "Smith"));
+    repository.save(new Customer("Bob", "Smith"));
+  }
 }
