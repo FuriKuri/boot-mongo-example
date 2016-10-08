@@ -3,6 +3,7 @@
 Simple project for some docker stuff
 
 ## customer
+
 ```
 # request data
 $ curl http://localhost:8080/
@@ -15,6 +16,10 @@ $ curl -H "Content-Type: application/json" \
 ```
 
 ## hash
+
+```
+$ curl -v http://localhost:8080
+```
 
 ## post
 
