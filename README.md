@@ -1,4 +1,4 @@
-# boot-mongo-example
+# docker-boot-exercices
 
 Simple project for some docker stuff
 
