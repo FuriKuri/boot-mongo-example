@@ -2,6 +2,9 @@
 
 Simple project for some docker stuff
 
+## Common usage
+All project can be built with `./mvnw clean install`. The app can be started with `java -jar target/<jar-name>`.
+
 ## customer
 
 ```
